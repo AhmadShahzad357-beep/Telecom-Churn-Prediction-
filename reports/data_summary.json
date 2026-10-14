@@ -1,0 +1,20 @@
+{
+  "raw_rows": 99999,
+  "raw_columns": 226,
+  "high_value_threshold_avg_spend_jun_jul": 478.0,
+  "high_value_customers": 30001,
+  "churners": 2057,
+  "churn_rate": 0.0686,
+  "dropped_month9_columns": 55,
+  "dropped_constant_columns": 13,
+  "missing_value_handling": {
+    "usage_filled_with_0": 87,
+    "data_recharge_filled_with_0": 27,
+    "date_columns_kept_as_NaT": 6
+  },
+  "features_after_cleaning": 157,
+  "train_rows": 24000,
+  "test_rows": 6001,
+  "train_churn_rate": 0.0686,
+  "test_churn_rate": 0.0685
+}

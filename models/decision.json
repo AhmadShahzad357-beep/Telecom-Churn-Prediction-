@@ -1,0 +1,30 @@
+{
+  "threshold": 0.6,
+  "threshold_best_f1": 0.81,
+  "chosen_on": "train out-of-fold",
+  "offer_cost_rs": 100,
+  "save_rate": 0.3,
+  "value_months": 3,
+  "risk_tiers": [
+    [
+      0.0,
+      0.1,
+      "Low"
+    ],
+    [
+      0.1,
+      0.3,
+      "Medium"
+    ],
+    [
+      0.3,
+      0.6,
+      "High"
+    ],
+    [
+      0.6,
+      1.01,
+      "Very high"
+    ]
+  ]
+}

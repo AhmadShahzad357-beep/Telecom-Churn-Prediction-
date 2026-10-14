@@ -1,0 +1,75 @@
+{
+  "windows": {
+    "A": {
+      "base": 6,
+      "action": 7,
+      "label": 8
+    },
+    "B": {
+      "base": 7,
+      "action": 8,
+      "label": 9
+    }
+  },
+  "results": {
+    "cv_a": {
+      "pr_auc": 0.5916155282050483,
+      "roc_auc": 0.9396327388288077,
+      "top10_capture": 0.7271400778210116,
+      "top20_capture": 0.8929961089494164,
+      "churn_rate": 0.06817880355484812,
+      "n": 30156
+    },
+    "oot": {
+      "pr_auc": 0.5882667764545598,
+      "roc_auc": 0.9395402759733747,
+      "top10_capture": 0.7331118493909191,
+      "top20_capture": 0.8931339977851606,
+      "churn_rate": 0.05978350822602536,
+      "n": 30209
+    },
+    "cv_b": {
+      "pr_auc": 0.5948041853949491,
+      "roc_auc": 0.9436056951075427,
+      "top10_capture": 0.7547065337763013,
+      "top20_capture": 0.9069767441860465,
+      "churn_rate": 0.05978350822602536,
+      "n": 30209
+    }
+  },
+  "pr_auc_change_a_to_oot": -0.0033487517504884323,
+  "pr_auc_gap_to_best_case_b": 0.006537408940389233,
+  "top10_drivers_model_a": [
+    "days_since_last_rech_now",
+    "last_day_rch_amt_now",
+    "aon",
+    "roamed_now",
+    "loc_ic_mou_now",
+    "days_since_last_data_rech_now",
+    "ratio_total_rech_amt",
+    "max_rech_amt_now",
+    "loc_ic_t2f_mou_now",
+    "roam_og_mou_now"
+  ],
+  "top10_drivers_model_b": [
+    "days_since_last_rech_now",
+    "last_day_rch_amt_now",
+    "roamed_now",
+    "days_since_last_data_rech_now",
+    "aon",
+    "ratio_last_day_rch_amt",
+    "ratio_total_rech_amt",
+    "spl_ic_mou_now",
+    "av_rech_amt_data_now",
+    "max_rech_data_now"
+  ],
+  "shared_top10": [
+    "aon",
+    "days_since_last_data_rech_now",
+    "days_since_last_rech_now",
+    "last_day_rch_amt_now",
+    "ratio_total_rech_amt",
+    "roamed_now"
+  ],
+  "n_customers_in_both_windows": 20277
+}

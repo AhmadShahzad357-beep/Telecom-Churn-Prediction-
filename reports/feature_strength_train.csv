@@ -1,0 +1,223 @@
+feature,auc,strength,direction,month,type
+ratio_spend,0.1442542487931137,0.7114915024137727,lower -> more churn,No month,engineered
+loc_ic_mou_8,0.14608924213073823,0.7078215157385235,lower -> more churn,August,raw
+ratio_total_rech_amt,0.14614006468977966,0.7077198706204406,lower -> more churn,No month,engineered
+total_ic_mou_8,0.14812120685694707,0.7037575862861059,lower -> more churn,August,raw
+loc_ic_t2m_mou_8,0.14954951101088407,0.7009009779782318,lower -> more churn,August,raw
+spend_8,0.15474590025015572,0.6905081994996886,lower -> more churn,August,engineered
+loc_og_mou_8,0.17306525855745902,0.653869482885082,lower -> more churn,August,raw
+total_rech_amt_8,0.17318936615952457,0.6536212676809509,lower -> more churn,August,raw
+loc_og_t2m_mou_8,0.1745902206960114,0.6508195586079772,lower -> more churn,August,raw
+loc_ic_t2t_mou_8,0.17563611906546064,0.6487277618690788,lower -> more churn,August,raw
+ratio_total_ic_mou,0.17716268469651755,0.645674630606965,lower -> more churn,No month,engineered
+arpu_8,0.17965000052725008,0.6406999989454998,lower -> more churn,August,raw
+ratio_loc_ic_mou,0.1833507932830732,0.6332984134338536,lower -> more churn,No month,engineered
+diff_arpu,0.18904218609405643,0.6219156278118871,lower -> more churn,No month,engineered
+ratio_total_og_mou,0.1892211929310223,0.6215576141379554,lower -> more churn,No month,engineered
+ratio_offnet_mou,0.1906337339383048,0.6187325321233904,lower -> more churn,No month,engineered
+diff_total_rech_amt,0.19096719243464627,0.6180656151307075,lower -> more churn,No month,engineered
+loc_og_t2t_mou_8,0.1969256346922289,0.6061487306155422,lower -> more churn,August,raw
+ratio_total_rech_num,0.19934424494581876,0.6013115101083625,lower -> more churn,No month,engineered
+last_day_rch_amt_8,0.20425364979354085,0.5914927004129182,lower -> more churn,August,raw
+total_og_mou_8,0.2054835964891015,0.589032807021797,lower -> more churn,August,raw
+max_rech_amt_8,0.20615005145852047,0.587699897082959,lower -> more churn,August,raw
+offnet_mou_8,0.2079198995159192,0.5841602009681617,lower -> more churn,August,raw
+diff_spend,0.2096759955867538,0.5806480088264925,lower -> more churn,No month,engineered
+ratio_loc_og_mou,0.21121966966749872,0.5775606606650026,lower -> more churn,No month,engineered
+ratio_onnet_mou,0.22642677132381406,0.5471464573523719,lower -> more churn,No month,engineered
+ratio_max_rech_amt,0.22756279140758487,0.5448744171848303,lower -> more churn,No month,engineered
+days_since_last_rech_8,0.7697658716134103,0.5395317432268205,higher -> more churn,August,engineered
+diff_total_rech_num,0.23246608124151852,0.535067837516963,lower -> more churn,No month,engineered
+ratio_last_day_rch_amt,0.23478875372322808,0.5304224925535439,lower -> more churn,No month,engineered
+total_rech_num_8,0.23525799270351122,0.5294840145929776,lower -> more churn,August,raw
+onnet_mou_8,0.24052746315201404,0.518945073695972,lower -> more churn,August,raw
+std_ic_mou_8,0.24391145742683915,0.5121770851463217,lower -> more churn,August,raw
+loc_ic_t2f_mou_8,0.24840697096352288,0.5031860580729542,lower -> more churn,August,raw
+ratio_std_og_mou,0.25019775954591705,0.4996044809081659,lower -> more churn,No month,engineered
+diff_total_og_mou,0.2516812890688231,0.4966374218623538,lower -> more churn,No month,engineered
+diff_max_rech_amt,0.26243986767218874,0.4751202646556225,lower -> more churn,No month,engineered
+ratio_std_ic_mou,0.2629844300334255,0.47403113993314905,lower -> more churn,No month,engineered
+diff_offnet_mou,0.26673762166295545,0.4665247566740891,lower -> more churn,No month,engineered
+diff_total_ic_mou,0.2695136340890983,0.4609727318218034,lower -> more churn,No month,engineered
+std_ic_t2m_mou_8,0.2744752475656538,0.45104950486869244,lower -> more churn,August,raw
+diff_std_og_mou,0.28639292023815177,0.42721415952369646,lower -> more churn,No month,engineered
+diff_loc_ic_mou,0.29002504818359087,0.41994990363281826,lower -> more churn,No month,engineered
+days_since_last_data_rech_8,0.70910331775101,0.41820663550202,higher -> more churn,August,engineered
+diff_last_day_rch_amt,0.292622135306285,0.41475572938743,lower -> more churn,No month,engineered
+av_rech_amt_data_8,0.2950952099493503,0.4098095801012994,lower -> more churn,August,raw
+diff_onnet_mou,0.2996884278174532,0.4006231443650936,lower -> more churn,No month,engineered
+max_rech_data_8,0.3005987495367537,0.3988025009264926,lower -> more churn,August,raw
+total_rech_data_8,0.3030146420064377,0.39397071598712463,lower -> more churn,August,raw
+loc_og_t2f_mou_8,0.3059852613491666,0.3880294773016668,lower -> more churn,August,raw
+std_og_mou_8,0.3080351226823962,0.3839297546352076,lower -> more churn,August,raw
+data_mb_8,0.3091563851995577,0.38168722960088464,lower -> more churn,August,engineered
+no_data_rech_8,0.6907709276698776,0.38154185533975515,higher -> more churn,August,engineered
+loc_ic_mou_7,0.3125547565512453,0.37489048689750937,lower -> more churn,July,raw
+diff_loc_og_mou,0.31767247953535893,0.36465504092928214,lower -> more churn,No month,engineered
+std_og_t2m_mou_8,0.31784073753697684,0.3643185249260463,lower -> more churn,August,raw
+vol_2g_mb_8,0.3181938320220388,0.36361233595592235,lower -> more churn,August,raw
+loc_ic_t2m_mou_7,0.31825437065854406,0.3634912586829119,lower -> more churn,July,raw
+used_data_8,0.3186967987005949,0.36260640259881016,lower -> more churn,August,engineered
+fb_user_8,0.3194226100705199,0.36115477985896016,lower -> more churn,August,raw
+ratio_data_mb,0.32387944954222186,0.35224110091555627,lower -> more churn,No month,engineered
+total_ic_mou_7,0.3270682933436797,0.3458634133126406,lower -> more churn,July,raw
+ratio_av_rech_amt_data,0.32708192302996814,0.34583615394006373,lower -> more churn,No month,engineered
+diff_std_ic_mou,0.3279425908373068,0.3441148183253864,lower -> more churn,No month,engineered
+loc_og_mou_7,0.3324100976108396,0.33517980477832077,lower -> more churn,July,raw
+loc_og_t2m_mou_7,0.3364806176892292,0.3270387646215416,lower -> more churn,July,raw
+ratio_total_rech_data,0.33699395271338656,0.3260120945732269,lower -> more churn,No month,engineered
+std_ic_t2t_mou_8,0.3378263012124252,0.32434739757514963,lower -> more churn,August,raw
+spl_og_mou_8,0.3411642290500443,0.3176715418999114,lower -> more churn,August,raw
+loc_ic_t2f_mou_7,0.3426444564655046,0.31471108706899076,lower -> more churn,July,raw
+loc_ic_t2t_mou_7,0.34496439757438874,0.3100712048512225,lower -> more churn,July,raw
+loc_og_t2t_mou_7,0.34625368708153603,0.30749262583692794,lower -> more churn,July,raw
+good_loc_ic_mou,0.35006953721901785,0.2998609255619643,lower -> more churn,No month,engineered
+diff_data_mb,0.3514555390664586,0.2970889218670828,lower -> more churn,No month,engineered
+diff_av_rech_amt_data,0.3515193933993291,0.29696121320134183,lower -> more churn,No month,engineered
+count_rech_2g_8,0.3517919327694186,0.2964161344611628,lower -> more churn,August,raw
+diff_total_rech_data,0.355366103973063,0.289267792053874,lower -> more churn,No month,engineered
+arpu_2g_8,0.3608280342888663,0.27834393142226743,lower -> more churn,August,raw
+vol_3g_mb_8,0.36152789082248943,0.27694421835502114,lower -> more churn,August,raw
+std_og_t2t_mou_8,0.36685628282607347,0.26628743434785307,lower -> more churn,August,raw
+good_loc_og_mou,0.3671315535689884,0.2657368928620232,lower -> more churn,No month,engineered
+tenure_years,0.3683528169449696,0.26329436611006085,lower -> more churn,No month,engineered
+aon,0.3683528169449696,0.26329436611006085,lower -> more churn,No month,raw
+good_total_ic_mou,0.37326347197328835,0.2534730560534233,lower -> more churn,No month,engineered
+arpu_3g_8,0.3743285850749526,0.2513428298500948,lower -> more churn,August,raw
+loc_og_t2f_mou_7,0.3767076243948718,0.24658475121025636,lower -> more churn,July,raw
+aug_vbc_3g,0.3781789374791207,0.24364212504175864,lower -> more churn,No month,raw
+loc_ic_mou_6,0.37898254541335374,0.2420349091732925,lower -> more churn,June,raw
+days_since_last_rech_7,0.620894841765729,0.2417896835314579,higher -> more churn,July,engineered
+last_day_rch_amt_7,0.37934474447450073,0.24131051105099854,lower -> more churn,July,raw
+loc_ic_t2m_mou_6,0.38337970235048086,0.2332405952990383,lower -> more churn,June,raw
+monthly_pack_8,0.38397867474551484,0.23204265050897033,lower -> more churn,August,engineered
+loc_ic_t2f_mou_6,0.38666967489107934,0.22666065021784132,lower -> more churn,June,raw
+max_rech_amt_7,0.38745472036123485,0.2250905592775303,lower -> more churn,July,raw
+loc_og_mou_6,0.3875598578316368,0.22488028433672635,lower -> more churn,June,raw
+loc_og_t2m_mou_6,0.38875136147384765,0.2224972770523047,lower -> more churn,June,raw
+std_ic_t2f_mou_8,0.39597486419505606,0.20805027160988787,lower -> more churn,August,raw
+days_since_last_data_rech_7,0.6021379610163251,0.20427592203265021,higher -> more churn,July,engineered
+sachet_pack_8,0.3984204076871539,0.20315918462569216,lower -> more churn,August,engineered
+loc_ic_t2t_mou_6,0.39915760657164495,0.2016847868567101,lower -> more churn,June,raw
+loc_og_t2f_mou_6,0.39935827414634145,0.2012834517073171,lower -> more churn,June,raw
+spend_7,0.4003868738212292,0.19922625235754154,lower -> more churn,July,engineered
+loc_og_t2t_mou_6,0.4015097941865732,0.19698041162685365,lower -> more churn,June,raw
+sachet_2g_8,0.4019188342533394,0.19616233149332118,lower -> more churn,August,raw
+av_rech_amt_data_7,0.4036461354036904,0.19270772919261925,lower -> more churn,July,raw
+max_rech_data_7,0.4055394387950172,0.18892112240996561,lower -> more churn,July,raw
+total_ic_mou_6,0.4055610995327477,0.18887780093450457,lower -> more churn,June,raw
+ic_others_8,0.4069713576015492,0.18605728479690165,lower -> more churn,August,raw
+data_mb_7,0.4123580732477551,0.17528385350448983,lower -> more churn,July,engineered
+roamed_8,0.5827907911914667,0.1655815823829334,higher -> more churn,August,engineered
+total_rech_data_7,0.4175076078924879,0.16498478421502416,lower -> more churn,July,raw
+count_rech_3g_8,0.418292490295609,0.163415019408782,lower -> more churn,August,raw
+months_with_recharge,0.4208332105800936,0.1583335788398128,lower -> more churn,No month,engineered
+offnet_mou_7,0.4216996265003934,0.15660074699921323,lower -> more churn,July,raw
+vol_2g_mb_7,0.4238682006346352,0.1522635987307296,lower -> more churn,July,raw
+fb_user_7,0.424284361295235,0.15143127740953,lower -> more churn,July,raw
+no_rech_8,0.574505871554706,0.149011743109412,higher -> more churn,August,engineered
+vol_3g_mb_7,0.4268231655420659,0.1463536689158682,lower -> more churn,July,raw
+total_rech_amt_7,0.4272330073550842,0.14553398528983164,lower -> more churn,July,raw
+good_last_day_rch_amt,0.42824955365834916,0.14350089268330168,lower -> more churn,No month,engineered
+count_rech_2g_7,0.4300128246786954,0.1399743506426092,lower -> more churn,July,raw
+roam_og_mou_7,0.5678750631477091,0.13575012629541816,higher -> more churn,July,raw
+loc_og_t2c_mou_8,0.43245732182398955,0.1350853563520209,lower -> more churn,August,raw
+isd_ic_mou_8,0.43266987970327453,0.13466024059345094,lower -> more churn,August,raw
+onnet_mou_7,0.43319680364696167,0.13360639270607666,lower -> more churn,July,raw
+good_max_rech_amt,0.43351591224427966,0.1329681755114407,lower -> more churn,No month,engineered
+std_ic_mou_7,0.43354311726117833,0.13291376547764333,lower -> more churn,July,raw
+total_og_mou_7,0.4340227381759822,0.13195452364803562,lower -> more churn,July,raw
+std_ic_t2f_mou_7,0.43403352777808885,0.1319329444438223,lower -> more churn,July,raw
+monthly_2g_8,0.43499340828691446,0.13001318342617108,lower -> more churn,August,raw
+jul_vbc_3g,0.4354900289400501,0.12901994211989976,lower -> more churn,No month,raw
+arpu_7,0.43660531233261846,0.1267893753347631,lower -> more churn,July,raw
+roam_og_mou_8,0.5630269035603077,0.12605380712061542,higher -> more churn,August,raw
+std_og_mou_6,0.5624264907398036,0.1248529814796071,higher -> more churn,June,raw
+std_ic_t2m_mou_7,0.4409457083528696,0.11810858329426077,lower -> more churn,July,raw
+std_og_t2f_mou_8,0.4410921969054007,0.11781560618919862,lower -> more churn,August,raw
+roam_ic_mou_8,0.5584654565860654,0.11693091317213078,higher -> more churn,August,raw
+roam_ic_mou_7,0.5580833633467267,0.1161667266934534,higher -> more churn,July,raw
+good_av_rech_amt_data,0.44323966744761284,0.11352066510477432,lower -> more churn,No month,engineered
+total_rech_num_6,0.5566907301065557,0.11338146021311135,higher -> more churn,June,raw
+monthly_3g_8,0.44440797480418637,0.11118405039162726,lower -> more churn,August,raw
+arpu_3g_7,0.44544713306954886,0.10910573386090228,lower -> more churn,July,raw
+good_std_og_mou,0.5540954774879979,0.10819095497599585,higher -> more churn,No month,engineered
+spend_6,0.5533366314546959,0.10667326290939183,higher -> more churn,June,engineered
+arpu_2g_7,0.4470994369730149,0.10580112605397018,lower -> more churn,July,raw
+std_og_t2t_mou_6,0.551908354478598,0.10381670895719597,higher -> more churn,June,raw
+monthly_2g_7,0.45077926202600355,0.0984414759479929,lower -> more churn,July,raw
+total_rech_amt_6,0.5479958463565008,0.09599169271300156,higher -> more churn,June,raw
+std_ic_t2f_mou_6,0.45250457919410314,0.09499084161179372,lower -> more churn,June,raw
+std_og_t2m_mou_6,0.5469138014611024,0.09382760292220471,higher -> more churn,June,raw
+good_data_mb,0.4533577051511028,0.0932845896977944,lower -> more churn,No month,engineered
+total_rech_num_7,0.4548947478391171,0.0902105043217658,lower -> more churn,July,raw
+max_rech_amt_6,0.4556897675762075,0.08862046484758501,lower -> more churn,June,raw
+arpu_6,0.5438099427623838,0.08761988552476763,higher -> more churn,June,raw
+good_total_rech_data,0.4565825731782341,0.08683485364353183,lower -> more churn,No month,engineered
+spl_ic_mou_8,0.4574578898408259,0.08508422031834817,lower -> more churn,August,raw
+ic_others_7,0.46070081754201225,0.0785983649159755,lower -> more churn,July,raw
+monthly_2g_6,0.4619128268637937,0.0761743462724126,lower -> more churn,June,raw
+max_rech_data_6,0.4634196342058542,0.07316073158829162,lower -> more churn,June,raw
+sachet_2g_7,0.46561317118527235,0.06877365762945531,lower -> more churn,July,raw
+days_since_last_data_rech_6,0.5341621903859809,0.06832438077196179,higher -> more churn,June,engineered
+sachet_3g_8,0.4674957936858487,0.06500841262830259,lower -> more churn,August,raw
+std_og_t2f_mou_6,0.4682487285391553,0.06350254292168944,lower -> more churn,June,raw
+std_og_t2f_mou_7,0.46874757777509374,0.06250484444981252,lower -> more churn,July,raw
+jun_vbc_3g,0.46906565361452757,0.061868692770944866,lower -> more churn,No month,raw
+data_mb_6,0.46988107031983206,0.06023785936033588,lower -> more churn,June,engineered
+av_rech_amt_data_6,0.47002978745516605,0.059940425089667904,lower -> more churn,June,raw
+fb_user_6,0.4700405091126751,0.05991898177464983,lower -> more churn,June,raw
+no_calls_good_phase,0.5291740241606642,0.05834804832132834,higher -> more churn,No month,engineered
+count_rech_2g_6,0.4709194404278619,0.05816111914427624,lower -> more churn,June,raw
+vol_3g_mb_6,0.4727095359753598,0.054580928049280386,lower -> more churn,June,raw
+vol_2g_mb_6,0.47321100787276776,0.05357798425446447,lower -> more churn,June,raw
+og_others_6,0.5264904979208409,0.05298099584168181,higher -> more churn,June,raw
+count_rech_3g_7,0.4744027697044496,0.05119446059110078,lower -> more churn,July,raw
+last_day_rch_amt_6,0.47521787386460507,0.049564252270789866,lower -> more churn,June,raw
+isd_ic_mou_7,0.47569503518497397,0.04860992963005206,lower -> more churn,July,raw
+std_ic_t2t_mou_7,0.47640659177831235,0.0471868164433753,lower -> more churn,July,raw
+good_total_rech_num,0.522824873288761,0.04564974657752208,higher -> more churn,No month,engineered
+good_offnet_mou,0.4780090243471041,0.043981951305791855,lower -> more churn,No month,engineered
+monthly_3g_7,0.47895030162509344,0.04209939674981311,lower -> more churn,July,raw
+good_onnet_mou,0.47977143926552,0.04045712146895997,lower -> more churn,No month,engineered
+total_rech_data_6,0.48062504083470314,0.03874991833059371,lower -> more churn,June,raw
+total_og_mou_6,0.5189043069373825,0.037808613874765085,higher -> more churn,June,raw
+good_std_ic_mou,0.48167621170492997,0.03664757659014006,lower -> more churn,No month,engineered
+good_spend,0.4818810782557611,0.036237843488477806,lower -> more churn,No month,engineered
+spl_og_mou_7,0.48200988762398395,0.03598022475203211,lower -> more churn,July,raw
+std_ic_t2t_mou_6,0.5159565985129808,0.031913197025961626,higher -> more churn,June,raw
+spl_og_mou_6,0.5156687580195009,0.0313375160390017,higher -> more churn,June,raw
+isd_og_mou_8,0.4875529981450581,0.024894003709883816,lower -> more churn,August,raw
+roam_og_mou_6,0.5121277166016699,0.024255433203339782,higher -> more churn,June,raw
+isd_og_mou_6,0.5109628064749789,0.021925612949957873,higher -> more churn,June,raw
+loc_og_t2c_mou_6,0.5101512762006599,0.02030255240131984,higher -> more churn,June,raw
+ic_others_6,0.4903172697447273,0.01936546051054544,lower -> more churn,June,raw
+onnet_mou_6,0.49054862109972186,0.01890275780055628,lower -> more churn,June,raw
+count_rech_3g_6,0.5091677781496914,0.01833555629938277,higher -> more churn,June,raw
+arpu_3g_6,0.491405171464443,0.017189657071113973,lower -> more churn,June,raw
+std_og_t2t_mou_7,0.5076382909009355,0.01527658180187097,higher -> more churn,July,raw
+roam_ic_mou_6,0.5075031626851314,0.015006325370262807,higher -> more churn,June,raw
+spl_ic_mou_6,0.4925112143917311,0.014977571216537755,lower -> more churn,June,raw
+good_arpu,0.506497120616663,0.012994241233325932,higher -> more churn,No month,engineered
+good_total_rech_amt,0.5064924052615861,0.012984810523172241,higher -> more churn,No month,engineered
+sachet_3g_6,0.5061396233216733,0.012279246643346564,higher -> more churn,June,raw
+offnet_mou_6,0.4939903954603877,0.012019209079224602,lower -> more churn,June,raw
+sachet_3g_7,0.4943412070069687,0.011317585986062584,lower -> more churn,July,raw
+std_og_t2m_mou_7,0.4947652356519763,0.010469528696047448,lower -> more churn,July,raw
+isd_ic_mou_6,0.5050218939235896,0.010043787847179297,higher -> more churn,June,raw
+isd_og_mou_7,0.5049473179332101,0.009894635866420254,higher -> more churn,July,raw
+night_pck_user_8,0.49571631054094667,0.00856737891810666,lower -> more churn,August,raw
+loc_og_t2c_mou_7,0.49636875533433034,0.007262489331339328,lower -> more churn,July,raw
+monthly_3g_6,0.503474659545928,0.006949319091855921,higher -> more churn,June,raw
+std_ic_mou_6,0.4969531332297893,0.00609373354042142,lower -> more churn,June,raw
+og_others_8,0.49728598022475207,0.005428039550495867,lower -> more churn,August,raw
+std_og_mou_7,0.5022617397665379,0.004523479533075747,higher -> more churn,July,raw
+night_pck_user_7,0.4980475983976381,0.00390480320472375,lower -> more churn,July,raw
+good_total_og_mou,0.49812782737854194,0.003744345242916114,lower -> more churn,No month,engineered
+night_pck_user_6,0.5013796558220203,0.0027593116440405296,higher -> more churn,June,raw
+arpu_2g_6,0.49878112827385607,0.002437743452287866,lower -> more churn,June,raw
+sachet_2g_6,0.4989170854137517,0.002165829172496636,lower -> more churn,June,raw
+std_ic_t2m_mou_6,0.500967069047257,0.0019341380945139264,higher -> more churn,June,raw
+spl_ic_mou_7,0.4991565493537055,0.0016869012925889715,lower -> more churn,July,raw
+og_others_7,0.5004654340828149,0.0009308681656297058,higher -> more churn,July,raw
+days_since_last_rech_6,0.5002581215264683,0.0005162430529366269,higher -> more churn,June,engineered

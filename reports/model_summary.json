@@ -1,0 +1,21 @@
+{
+  "best_family": "LightGBM",
+  "imbalance_strategy": "class weights",
+  "params": {
+    "reg_lambda": 5,
+    "num_leaves": 7,
+    "n_estimators": 800,
+    "min_child_samples": 50,
+    "learning_rate": 0.02,
+    "colsample_bytree": 0.7
+  },
+  "tuning_cv3_pr_auc": 0.6748,
+  "nested_cv_pr_auc": null,
+  "nested_cv_roc_auc": null,
+  "final_train_pr_auc": 0.7722,
+  "final_cv_pr_auc": 0.6838,
+  "train_cv_gap": 0.0884,
+  "baseline_pr_auc_random": 0.0686,
+  "n_train": 24000,
+  "minutes": 11.6
+}

@@ -1,0 +1,31 @@
+feature,label,group,mean_abs_shap,effect
+days_since_last_rech_8,days since last recharge (Aug),Recharge recency,0.6972023225197304,higher value -> more churn
+last_day_rch_amt_8,last recharge amount (Aug),Recharge & revenue,0.38890265933393703,lower value -> more churn
+days_since_last_data_rech_8,days since last data recharge (Aug),Recharge recency,0.2436414226558414,higher value -> more churn
+loc_ic_mou_8,local incoming minutes (Aug),Calls,0.19487016469335003,lower value -> more churn
+aon,tenure on network (days),Tenure,0.18536166123648362,lower value -> more churn
+ratio_total_rech_amt,recharge amount: Aug / Jun-Jul,Recharge & revenue,0.18261585787171652,lower value -> more churn
+spl_ic_mou_8,special incoming minutes (Aug),Calls,0.1581501687924758,lower value -> more churn
+av_rech_amt_data_8,avg data recharge amount (Aug),Mobile data,0.15716384021664617,lower value -> more churn
+roam_og_mou_8,roaming outgoing minutes (Aug),Roaming,0.1499261600556992,higher value -> more churn
+ratio_last_day_rch_amt,last recharge amount: Aug / Jun-Jul,Recharge & revenue,0.14801042013905885,lower value -> more churn
+ratio_total_ic_mou,incoming minutes: Aug / Jun-Jul,Calls,0.13659607837277538,lower value -> more churn
+max_rech_data_8,largest data recharge (Aug),Mobile data,0.1356149536608696,lower value -> more churn
+total_ic_mou_8,incoming minutes (Aug),Calls,0.12211076468007065,lower value -> more churn
+arpu_7,ARPU (Jul),Recharge & revenue,0.09090534914622851,higher value -> more churn
+ratio_loc_og_mou,local outgoing minutes: Aug / Jun-Jul,Calls,0.08420182123772826,lower value -> more churn
+roamed_8,roamed in Aug (flag),Roaming,0.07923385193346932,higher value -> more churn
+loc_og_t2m_mou_8,local outgoing to other mobiles (Aug),Calls,0.07432788263172566,lower value -> more churn
+total_rech_num_7,number of recharges (Jul),Recharge & revenue,0.07380097405757273,higher value -> more churn
+loc_ic_t2t_mou_7,local incoming same network (Jul),Calls,0.07076403136949896,higher value -> more churn
+loc_og_t2f_mou_8,local outgoing to landlines (Aug),Calls,0.06891547467000135,lower value -> more churn
+diff_data_mb,mobile data (MB): Aug - Jun-Jul,Mobile data,0.0667827253516487,lower value -> more churn
+ratio_offnet_mou,other-network minutes: Aug / Jun-Jul,Calls,0.0634982633473999,lower value -> more churn
+loc_ic_t2m_mou_8,local incoming from other mobiles (Aug),Calls,0.06325697985626783,lower value -> more churn
+ratio_std_ic_mou,STD incoming minutes: Aug / Jun-Jul,Calls,0.05785295029149343,lower value -> more churn
+roam_ic_mou_8,roaming incoming minutes (Aug),Roaming,0.05667231706239706,lower value -> more churn
+total_rech_num_8,number of recharges (Aug),Recharge & revenue,0.05420276033892542,higher value -> more churn
+loc_og_t2t_mou_8,local outgoing same network (Aug),Calls,0.053718074826531965,lower value -> more churn
+diff_total_ic_mou,incoming minutes: Aug - Jun-Jul,Calls,0.05208278662276802,lower value -> more churn
+diff_arpu,ARPU: Aug - Jun-Jul,Recharge & revenue,0.050716738005582705,higher value -> more churn
+spl_og_mou_6,special outgoing minutes (Jun),Calls,0.0472492525426873,lower value -> more churn
