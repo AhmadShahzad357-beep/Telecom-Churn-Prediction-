@@ -15,6 +15,36 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))   # project root, so `src` imports work on Vercel too
 
+
+def _ensure_libgomp():
+    """LightGBM needs libgomp.so.1 (OpenMP). Vercel's Linux runtime does not have it, so the app crashed with
+    500 FUNCTION_INVOCATION_FAILED. scikit-learn ships its own copy under a renamed file; copy it to /tmp with
+    the standard name and load it once, before LightGBM is imported. Does nothing on Windows or when the
+    system already has libgomp (a normal laptop / server)."""
+    import ctypes
+    import glob
+    import os
+    if not sys.platform.startswith("linux"):
+        return
+    try:
+        ctypes.CDLL("libgomp.so.1", mode=ctypes.RTLD_GLOBAL)
+        return
+    except OSError:
+        pass
+    import sklearn
+    libs = glob.glob(os.path.join(os.path.dirname(os.path.dirname(sklearn.__file__)), "scikit_learn.libs", "libgomp*.so*"))
+    if not libs:
+        return
+    data = Path(libs[0]).read_bytes()
+    old, new = os.path.basename(libs[0]).encode(), b"libgomp.so.1"
+    data = data.replace(old + b"\0", new + b"\0" * (len(old) - len(new) + 1))
+    dst = Path("/tmp/libgomp.so.1")
+    dst.write_bytes(data)
+    ctypes.CDLL(str(dst), mode=ctypes.RTLD_GLOBAL)
+
+
+_ensure_libgomp()
+
 import pandas as pd
 from fastapi import FastAPI, File, HTTPException, UploadFile
 from fastapi.responses import FileResponse

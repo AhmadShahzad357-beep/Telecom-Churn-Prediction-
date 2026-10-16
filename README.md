@@ -1,6 +1,6 @@
 # Telecom Customer Churn Prediction
 
-<a href="https://YOUR-PROJECT.vercel.app" target="_blank"><img src="https://img.shields.io/badge/LIVE%20DEMO-Open%20the%20Dashboard-EB6834?style=for-the-badge&labelColor=0F1729" alt="Live Demo" height="45"></a>
+<a href="https://telecom-churn-prediction-ew8t.vercel.app" target="_blank"><img src="https://img.shields.io/badge/LIVE%20DEMO-Open%20the%20Dashboard-EB6834?style=for-the-badge&labelColor=0F1729" alt="Live Demo" height="45"></a>
 
 ## Overview
 
