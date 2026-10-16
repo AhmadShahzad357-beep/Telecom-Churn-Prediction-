@@ -4,10 +4,16 @@ Step 7 - Churn Radar web app: FastAPI backend + plain HTML/CSS/JS dashboard (app
 Run from the project root:
     python -m uvicorn app.main:app --port 8000
 then open http://127.0.0.1:8000
+
+Deployed as-is on Vercel: it detects `app` in app/main.py (see vercel.json).
 """
 import io
 import json
 import math
+import sys
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parents[1]))   # project root, so `src` imports work on Vercel too
 
 import pandas as pd
 from fastapi import FastAPI, File, HTTPException, UploadFile
@@ -20,13 +26,14 @@ from src.predict import ChurnScorer
 
 APP_DIR = C.ROOT / "app"
 DATA = APP_DIR / "data"
-MAX_UPLOAD_MB = 25
+MAX_UPLOAD_MB = 4          # Vercel limits a request body to 4.5 MB
 MAX_ROWS = 20000
 
 INPUT_COLS = json.loads((DATA / "input_columns.json").read_text())
 scorer = ChurnScorer(INPUT_COLS)
-customers = pd.read_parquet(DATA / "customers.parquet")
-scored = pd.read_parquet(DATA / "scored.parquet")
+DATE_COLS = [c for c in INPUT_COLS if c.startswith("date_of_last_rech")]
+customers = pd.read_csv(DATA / "customers.csv.gz", index_col=C.ID_COLUMN, parse_dates=DATE_COLS)
+scored = pd.read_csv(DATA / "scored.csv.gz", index_col=C.ID_COLUMN, keep_default_na=False)
 dashboard = json.loads((DATA / "dashboard.json").read_text())
 
 app = FastAPI(title="Churn Radar", version="1.0")

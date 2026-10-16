@@ -1,0 +1,131 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 660" width="1200" height="660" role="img" aria-label="Churn Radar architecture: offline ML pipeline feeding a FastAPI + HTML dashboard deployed on Vercel">
+  <title>Churn Radar architecture</title>
+  <style>
+    text { font-family: "Segoe UI", Inter, system-ui, -apple-system, Roboto, sans-serif; fill: #101828; }
+    .title { font-size: 26px; font-weight: 700; }
+    .sub { font-size: 14px; fill: #667085; }
+    .lane { font-size: 12px; font-weight: 700; letter-spacing: 1.5px; fill: #667085; }
+    .name { font-size: 15px; font-weight: 700; }
+    .line1 { font-size: 12px; fill: #344054; }
+    .line2 { font-size: 12px; fill: #667085; }
+    .kpi-v { font-size: 20px; font-weight: 700; fill: #ffffff; }
+    .kpi-k { font-size: 11.5px; fill: #c9d1e0; }
+    .box { opacity: 0; animation: rise .7s ease-out forwards; }
+    .d1 { animation-delay: .1s } .d2 { animation-delay: .3s } .d3 { animation-delay: .5s }
+    .d4 { animation-delay: .7s } .d5 { animation-delay: .9s } .d6 { animation-delay: 1.1s }
+    .d7 { animation-delay: 1.4s } .d8 { animation-delay: 1.6s } .d9 { animation-delay: 1.8s } .d10 { animation-delay: 2s }
+    .flow { fill: none; stroke-width: 2.2; stroke-dasharray: 7 7; animation: dash 1.1s linear infinite; }
+    .glow { animation: glow 2.6s ease-in-out infinite; }
+    @keyframes rise { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+    @keyframes dash { to { stroke-dashoffset: -28; } }
+    @keyframes glow { 0%, 100% { opacity: .15; } 50% { opacity: .55; } }
+  </style>
+  <defs>
+    <marker id="a-violet" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#6250d6"/></marker>
+    <marker id="a-blue" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#2a78d6"/></marker>
+    <marker id="a-orange" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#eb6834"/></marker>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#f3f6fb"/></linearGradient>
+  </defs>
+
+  <rect x="1" y="1" width="1198" height="658" rx="22" fill="url(#bg)" stroke="#e4e7ec" stroke-width="2"/>
+  <text class="title" x="40" y="54">Churn Radar - how it works</text>
+  <text class="sub" x="40" y="80">An offline, leak-free ML pipeline trains the model once; one Vercel deployment serves the API and the dashboard.</text>
+
+  <!-- ============ lane 1: offline pipeline ============ -->
+  <text class="lane" x="40" y="122">1  OFFLINE ML PIPELINE   (src/, run on a laptop)</text>
+  <g class="box d1"><rect x="40" y="136" width="170" height="92" rx="14" fill="#ffffff" stroke="#6250d6" stroke-width="2"/>
+    <text class="name" x="125" y="166" text-anchor="middle">Raw data</text>
+    <text class="line1" x="125" y="188" text-anchor="middle">Kaggle, 99,999 x 226</text>
+    <text class="line2" x="125" y="207" text-anchor="middle">June - September 2014</text></g>
+  <g class="box d2"><rect x="230" y="136" width="170" height="92" rx="14" fill="#ffffff" stroke="#6250d6" stroke-width="2"/>
+    <text class="name" x="315" y="166" text-anchor="middle">Clean + label</text>
+    <text class="line1" x="315" y="188" text-anchor="middle">top 30% high-value</text>
+    <text class="line2" x="315" y="207" text-anchor="middle">NaN filled by meaning</text></g>
+  <g class="box d3"><rect x="420" y="136" width="170" height="92" rx="14" fill="#ffffff" stroke="#6250d6" stroke-width="2"/>
+    <text class="name" x="505" y="166" text-anchor="middle">Split first</text>
+    <text class="line1" x="505" y="188" text-anchor="middle">24,000 train</text>
+    <text class="line2" x="505" y="207" text-anchor="middle">6,001 test, locked</text></g>
+  <g class="box d4"><rect x="610" y="136" width="170" height="92" rx="14" fill="#ffffff" stroke="#6250d6" stroke-width="2"/>
+    <text class="name" x="695" y="166" text-anchor="middle">Features</text>
+    <text class="line1" x="695" y="188" text-anchor="middle">Aug vs own Jun-Jul</text>
+    <text class="line2" x="695" y="207" text-anchor="middle">151 to 222 columns</text></g>
+  <g class="box d5">
+    <rect class="glow" x="794" y="130" width="182" height="104" rx="18" fill="#eb6834"/>
+    <rect x="800" y="136" width="170" height="92" rx="14" fill="#ffffff" stroke="#eb6834" stroke-width="2.5"/>
+    <text class="name" x="885" y="166" text-anchor="middle">LightGBM</text>
+    <text class="line1" x="885" y="188" text-anchor="middle">class weights, tuned</text>
+    <text class="line2" x="885" y="207" text-anchor="middle">CV PR-AUC 0.684</text></g>
+  <g class="box d6"><rect x="990" y="136" width="170" height="92" rx="14" fill="#ffffff" stroke="#6250d6" stroke-width="2"/>
+    <text class="name" x="1075" y="166" text-anchor="middle">Calibrate + test</text>
+    <text class="line1" x="1075" y="188" text-anchor="middle">isotonic, threshold 0.60</text>
+    <text class="line2" x="1075" y="207" text-anchor="middle">test PR-AUC 0.644</text></g>
+
+  <g class="box d6">
+    <path class="flow" stroke="#6250d6" d="M210 182H226" marker-end="url(#a-violet)"/>
+    <path class="flow" stroke="#6250d6" d="M400 182H416" marker-end="url(#a-violet)"/>
+    <path class="flow" stroke="#6250d6" d="M590 182H606" marker-end="url(#a-violet)"/>
+    <path class="flow" stroke="#6250d6" d="M780 182H796" marker-end="url(#a-violet)"/>
+    <path class="flow" stroke="#eb6834" d="M970 182H986" marker-end="url(#a-orange)"/>
+  </g>
+
+  <!-- explain + temporal side checks -->
+  <g class="box d7"><rect x="800" y="262" width="170" height="70" rx="14" fill="#fff7f2" stroke="#eb6834" stroke-width="1.5" stroke-dasharray="5 4"/>
+    <text class="name" x="885" y="290" text-anchor="middle">SHAP explain</text>
+    <text class="line2" x="885" y="312" text-anchor="middle">reasons per customer</text></g>
+  <g class="box d7"><rect x="610" y="262" width="170" height="70" rx="14" fill="#f5f3ff" stroke="#6250d6" stroke-width="1.5" stroke-dasharray="5 4"/>
+    <text class="name" x="695" y="290" text-anchor="middle">Temporal check</text>
+    <text class="line2" x="695" y="312" text-anchor="middle">Jul-trained, Sep 0.588</text></g>
+  <g class="box d7">
+    <path class="flow" stroke="#eb6834" d="M885 228V258" marker-end="url(#a-orange)"/>
+  </g>
+
+  <!-- artifacts -->
+  <g class="box d8"><rect x="990" y="262" width="170" height="70" rx="14" fill="#ffffff" stroke="#344054" stroke-width="1.8"/>
+    <text class="name" x="1075" y="290" text-anchor="middle">Saved artifacts</text>
+    <text class="line2" x="1075" y="312" text-anchor="middle">models/, app/data/</text></g>
+  <g class="box d8"><path class="flow" stroke="#344054" d="M1075 228V258" marker-end="url(#a-blue)"/></g>
+
+  <!-- ============ lane 2: serving on Vercel ============ -->
+  <text class="lane" x="40" y="384">2  SERVING   (one Vercel deployment)</text>
+  <g class="box d9">
+    <rect x="300" y="398" width="860" height="132" rx="18" fill="#f2f7fe" stroke="#2a78d6" stroke-width="1.6" stroke-dasharray="8 6"/>
+    <text x="320" y="422" font-size="12.5" font-weight="700" fill="#2a78d6">Vercel  (Python runtime, FastAPI zero-config)</text>
+  </g>
+  <g class="box d9"><rect x="890" y="436" width="250" height="78" rx="14" fill="#ffffff" stroke="#2a78d6" stroke-width="2"/>
+    <text class="name" x="1015" y="464" text-anchor="middle">FastAPI backend</text>
+    <text class="line1" x="1015" y="485" text-anchor="middle">app/main.py + src/predict.py</text>
+    <text class="line2" x="1015" y="503" text-anchor="middle">score, explain, what-if, CSV</text></g>
+  <g class="box d9"><rect x="560" y="436" width="250" height="78" rx="14" fill="#ffffff" stroke="#2a78d6" stroke-width="2"/>
+    <text class="name" x="685" y="464" text-anchor="middle">Dashboard</text>
+    <text class="line1" x="685" y="485" text-anchor="middle">HTML, CSS, JS, SVG charts</text>
+    <text class="line2" x="685" y="503" text-anchor="middle">5 pages, live checker</text></g>
+  <g class="box d10"><rect x="40" y="436" width="230" height="78" rx="14" fill="#ffffff" stroke="#1baf7a" stroke-width="2"/>
+    <text class="name" x="155" y="464" text-anchor="middle">Retention team</text>
+    <text class="line1" x="155" y="485" text-anchor="middle">who to call, and why</text>
+    <text class="line2" x="155" y="503" text-anchor="middle">browser, phone or laptop</text></g>
+
+  <g class="box d9">
+    <path class="flow" stroke="#344054" d="M1075 332V432" marker-end="url(#a-blue)"/>
+    <text class="line2" x="1086" y="388">loads once</text>
+    <path class="flow" stroke="#2a78d6" d="M886 466H814" marker-end="url(#a-blue)"/>
+    <path class="flow" stroke="#2a78d6" d="M814 488H886" marker-end="url(#a-blue)" style="animation-direction: reverse"/>
+    <text class="line2" x="850" y="458" text-anchor="middle">JSON</text>
+  </g>
+  <g class="box d10">
+    <path class="flow" stroke="#1baf7a" d="M556 466H274" marker-end="url(#a-blue)"/>
+    <path class="flow" stroke="#1baf7a" d="M274 488H556" marker-end="url(#a-blue)" style="animation-direction: reverse"/>
+  </g>
+  <circle r="5" fill="#2a78d6"><animateMotion dur="2.4s" repeatCount="indefinite" path="M556 488H274"/></circle>
+  <circle r="5" fill="#1baf7a"><animateMotion dur="2.4s" begin="1.2s" repeatCount="indefinite" path="M274 466H556"/></circle>
+  <circle r="4.5" fill="#eb6834"><animateMotion dur="1.6s" repeatCount="indefinite" path="M886 466H814"/></circle>
+
+  <!-- ============ KPI strip ============ -->
+  <g class="box d10">
+    <rect x="40" y="556" width="1120" height="80" rx="16" fill="#0f1729"/>
+    <text class="kpi-v" x="150" y="592" text-anchor="middle">0.949</text><text class="kpi-k" x="150" y="614" text-anchor="middle">test ROC-AUC</text>
+    <text class="kpi-v" x="374" y="592" text-anchor="middle">0.644</text><text class="kpi-k" x="374" y="614" text-anchor="middle">test PR-AUC (random 0.068)</text>
+    <text class="kpi-v" x="598" y="592" text-anchor="middle">82%</text><text class="kpi-k" x="598" y="614" text-anchor="middle">churners caught</text>
+    <text class="kpi-v" x="822" y="592" text-anchor="middle">76%</text><text class="kpi-k" x="822" y="614" text-anchor="middle">churners in top 10% of calls</text>
+    <text class="kpi-v" x="1046" y="592" text-anchor="middle">Rs 238k</text><text class="kpi-k" x="1046" y="614" text-anchor="middle">monthly revenue at risk</text>
+  </g>
+</svg>

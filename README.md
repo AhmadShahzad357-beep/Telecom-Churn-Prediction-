@@ -44,18 +44,6 @@ Prepaid customers have no contract to cancel. A profitable customer simply stops
   <img src="docs/images/customers.png" alt="Customers at risk" width="32%">
 </p>
 
-## Results
-
-Measured on 6,001 test customers that were never used for training or tuning.
-
-| Metric | Result |
-|---|---|
-| ROC-AUC | **0.949** |
-| PR-AUC | **0.644** (random guessing: 0.068) |
-| Churners caught | **82%** (338 of 411) |
-| Churners found in the top 10% of scores | **76%** |
-| Calibration (Brier score) | **0.036** (before calibration: 0.071) |
-| PR-AUC one month later (trained on July, tested on September) | **0.588** (in-time: 0.592) |
 
 ## Benefits
 

@@ -1,0 +1,6 @@
+-r requirements.txt
+pyarrow==26.0.0
+matplotlib==3.11.2
+shap==0.53.0
+xgboost==3.4.1
+imbalanced-learn==0.14.2

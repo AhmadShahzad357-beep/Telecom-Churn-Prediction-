@@ -86,7 +86,8 @@ def describe(name: str, value: float) -> str:
         what = "data recharge" if m.group(1) else "recharge"
         if value >= NO_RECHARGE_DAYS:
             return f"no {what} in {MONTH[m.group(2)]}"
-        return f"last {what} {value:.0f} days before end of {MONTH[m.group(2)]}"
+        unit = "day" if round(value) == 1 else "days"
+        return f"last {what} {value:.0f} {unit} before end of {MONTH[m.group(2)]}"
     if SPECIAL.get(name, "").endswith("(flag)"):
         return f"{pretty(name).replace(' (flag)', '')}: {'yes' if value >= 0.5 else 'no'}"
     if name.startswith("ratio_"):

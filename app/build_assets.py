@@ -1,8 +1,9 @@
 """
 Prepare everything the web app needs into app/data/ (run once after Steps 1-6).
 
-  app/data/customers.parquet     cleaned TEST customers (never used in training) for the live checker
-  app/data/scored.parquet        their predictions + reasons (from the saved model, same as Step 5/6)
+  app/data/customers.csv.gz      cleaned TEST customers (never used in training) for the live checker
+  app/data/scored.csv.gz         their predictions + reasons (from the saved model, same as Step 5/6)
+  (gzipped CSV, not parquet: the deployed app then needs no pyarrow, which keeps the Vercel bundle small)
   app/data/dashboard.json        headline numbers, risk tiers, gains curve, top drivers
   app/data/input_columns.json    the raw columns a new file must contain
   app/static/sample_customers.csv  25 raw rows (Kaggle format, Jun-Aug only) to try the file upload
@@ -39,13 +40,15 @@ def main() -> None:
     test = pd.read_parquet(C.PROCESSED_DIR / "test.parquet")
     input_cols = [c for c in test.columns if c != C.TARGET]
     (OUT / "input_columns.json").write_text(json.dumps(input_cols))
-    test.to_parquet(OUT / "customers.parquet")
+    test.to_csv(OUT / "customers.csv.gz")
+    for old in list(OUT.glob("*.parquet")) + list(OUT.glob("*.pkl.gz")):
+        old.unlink()
 
     scorer = ChurnScorer(input_cols)
     clean = test[input_cols]
     scored = scorer.score(clean)
     scored.insert(0, "actual_churn", test[C.TARGET].astype(int))
-    scored.to_parquet(OUT / "scored.parquet")
+    scored.to_csv(OUT / "scored.csv.gz")
 
     ref = pd.read_csv(C.REPORTS_DIR / "test_predictions.csv", index_col=0).loc[scored.index]
     gap = float(np.abs(ref["churn_probability"] - scored["churn_probability"]).max())

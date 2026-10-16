@@ -280,7 +280,7 @@ function ctrlRange(key, label, value, max, step, base, unit) {
 }
 function ctrlDay(key, label, value, disabled, note) {
   const opts = [`<option value="none">No ${key === "recharge_day" ? "" : "data "}recharge in August</option>`]
-    .concat(Array.from({ length: 31 }, (_, i) => `<option value="${i + 1}">Day ${i + 1} (${31 - i - 1} days before month end)</option>`));
+    .concat(Array.from({ length: 31 }, (_, i) => `<option value="${i + 1}">Day ${i + 1} (${30 - i} ${30 - i === 1 ? "day" : "days"} before month end)</option>`));
   return `<div class="ctrl" data-key="${key}">
     <label for="ctl-${key}">${label}</label>
     <select class="input" id="ctl-${key}" ${disabled ? "disabled" : ""}>${opts.join("")}</select>
